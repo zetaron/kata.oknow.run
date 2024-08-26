@@ -14,3 +14,6 @@ git push
 
 This repository uses GitHub Pages, which builds with `docs/` as it's root.
 Under the covers GitHub Pages uses Jekyll by default, which also injects a bunch of stuff into the generated HTML output - sadly it seems the only way to get rid of that extra stuff is to go above and beyond in configuring Jekyll... which is not worth it for this project.
+
+To change the `CNAME` Adress, modify the `docs/CNAME` file.
+Remember to update the DNS Record to point to `zetaron.github.io.`.
