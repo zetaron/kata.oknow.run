@@ -1,0 +1,82 @@
+# 99 Bottles
+
+## Preparations
+
+Dies ist ein Livebook um es zu öffnen, folge einfach diesem Button: [![Run in Livebook](https://livebook.dev/badge/v1/blue.svg)](https://livebook.dev/run?url=https%3A%2F%2Fkata.oknow.run%2Flivebook%2F99-bottles.livemd)
+
+oder richte die eine eigene Spielwiese ein, ein simples `mix new` reicht aus.
+
+## Instructions
+
+Complete the function that returns the lyrics for the song 99 Bottles of Beer as an array of strings: each line should be a separate element - see the example at the bottom.
+
+Note: in order to avoid hardcoded solutions, the size of your code is limited to 1000 characters
+
+<!-- livebook:{"break_markdown":true} -->
+
+### Lyrics
+
+> 99 bottles of beer on the wall, 99 bottles of beer.
+> Take one down and pass it around, 98 bottles of beer on the wall.
+> 
+> 98 bottles of beer on the wall, 98 bottles of beer.
+> Take one down and pass it around, 97 bottles of beer on the wall.
+> 
+> ...and so on...
+> 
+> 3 bottles of beer on the wall, 3 bottles of beer.
+> Take one down and pass it around, 2 bottles of beer on the wall.
+> 
+> 2 bottles of beer on the wall, 2 bottles of beer.
+> Take one down and pass it around, 1 bottle of beer on the wall.
+> 
+> 1 bottle of beer on the wall, 1 bottle of beer.
+> Take one down and pass it around, no more bottles of beer on the wall.
+> 
+> No more bottles of beer on the wall, no more bottles of beer.
+> Go to the store and buy some more, 99 bottles of beer on the wall.
+
+<!-- livebook:{"break_markdown":true} -->
+
+### Example
+
+```elixir
+[ "99 bottles of beer on the wall, 99 bottles of beer.",
+  "Take one down and pass it around, 98 bottles of beer on the wall.",
+  "98 bottles of beer on the wall, 98 bottles of beer.",
+
+  # ...and so on...
+
+  "3 bottles of beer on the wall, 3 bottles of beer.",
+  "Take one down and pass it around, 2 bottles of beer on the wall.",
+  "2 bottles of beer on the wall, 2 bottles of beer.",
+  "Take one down and pass it around, 1 bottle of beer on the wall.",
+  "1 bottle of beer on the wall, 1 bottle of beer.",
+  "Take one down and pass it around, no more bottles of beer on the wall.",
+  "No more bottles of beer on the wall, no more bottles of beer.",
+  "Go to the store and buy some more, 99 bottles of beer on the wall." ]
+```
+
+## Preparation
+
+```elixir
+defmodule DoNotModify do
+  defmodule BottlesKata do
+    @callback start(initial_count_of_bottles :: non_neg_integer) :: any
+  end
+end
+```
+
+## Your Implementation
+
+```elixir
+defmodule YourImplementation do
+  @behaviour DoNotModify.BottlesKata
+end
+```
+
+## Show it
+
+```elixir
+DoNotModify.BottlesKata.start(99)
+```
